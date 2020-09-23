@@ -98,6 +98,68 @@ To perform a diff use this command:
 
 This will generate a text file that will show you the changes that are made to turn branch1 into branch2.
 
-For example: If branch1 has "hello world" on line 1 and branch2 does not, then the diff file will show ""
+For example: If branch1 has "hello world" on line 1 and branch2 does not, then the diff file will highlight that "hello world" on line 1 is removed. If you instead ran `git diff <branch2> <branch1>` then the diff file will highlight that "hello world" on line 1 is added. Try for yourself!
 
+The diff command will open up an embedded text viewer inside the terminal. You can navigate through the text viewer through the arrow buttons (or you can use `j` for up and `k` for down). You can exit (quit) the view by pressing `q`.
+
+Alternatively, if you want to save the text file somewhere, you can modify this command with:
+
+`git diff <branch1> <branch2> > <choose a filename>`
+
+The `>` command means to "pipe" which will write the output of the command to the file you provide afterwards. An example would be: `git diff master mydevbranch > diff.txt`
+
+
+### Perform a merge
+
+Sometimes, you will need to manually merge two branches together.
+
+The most common case would be if there have been updates to `master` before you finish your dev branch. Before you submit a PR, you need to make sure that your dev branch has the most recent updates to master.
+
+Run this command:
+
+`git merge <branch1> <branch2>`
+
+The first one is the branch with the changes that you want to merge INTO branch2. In other words, branch1 is the source branch, while branch2 is the destination branch.
+
+In the above example, if we wanted to merge new changes from master into our dev branch, we would do this:
+
+`git checkout master`  - Switch to master
+`git pull`  - Pull the most recent changes from master
+`git checkout <name of branch>`  - Switch back to your branch
+`git merge master <name of branch>`  - Perform the merge
+
+If there are no conflicts (changes that occur in the same file), then it will ask for confirmation. All you need to do is type `q`.
+
+If there are conflicts, it will tell you that these conflicts need to be resolved, and will check you out to a tmp version of your branch. You can then manually edit the conflicting files to resolve them. Stage and commit these changes, and you are good to go!
+
+
+### Perform a reset
+
+Sometimes, you want to reset your current working branch to the state of the previous commit.
+
+There are a lot of options for this, but for our sake, just remember this:
+
+`git reset --hard`
+
+This will reset everything that was not committed back to the state of the last commit. BEWARE, this will delete your changes.
+
+
+### Check your commit history
+
+To check the commit history of your current branch, use this command:
+
+`git log`
+
+This will put you into an embedded UI, listing all the previous commits, messages, and hash codes. You can navigate using the arrow keys or `j` and `k`. You can leave with `q`
+
+
+
+### Perform a revert
+
+Sometimes, you want to undo a commit. The best way to do this is to "revert" it. This is essentially making a new commit, that does the opposite of the commit you are reverting. Process looks like:
+
+`git log`  - View the git log and copy the hash code from the commit you want to revert
+`git revert <hash code>`
+
+This will show you a confirmation screen (similar to a merge). Just type `q` and your revert will go through.
 
