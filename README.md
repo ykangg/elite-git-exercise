@@ -2,7 +2,7 @@
 
 ## Instructions
 
-This is an exercise to get you through the basic steps of development with git. Try to follow these steps on your own (you may use Google as a reference). Reach out to me if you get stuck.
+This is an exercise to get you through the basic steps of development with git. Try to follow these steps on your own (you may use Google or the provided cheatsheet as a reference). Reach out to me if you get stuck.
 
 ### Part 1
 
