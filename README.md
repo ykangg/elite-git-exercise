@@ -2,10 +2,11 @@
 
 ## Instructions
 
-This is an exercise to get you through the basic steps of development with git. Try to follow these steps on your own (you may use Google or the provided cheatsheet as a reference). Reach out to me if you get stuck.
+This is an exercise to get you through the basic steps of development with git. We will be going over this exercise together, following my screen. Reach out to me if you get stuck.
 
 ### Part 1
 
+* Fork this repository
 * Clone this repository to your local
 * Create a development branch
 * Create the file [your-name].txt file with your github username inside
