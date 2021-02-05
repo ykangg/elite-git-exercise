@@ -4,10 +4,52 @@
 
 This is an exercise to get you through the basic steps of development with git. We will be going over this exercise together, following my screen. Reach out to me if you get stuck.
 
-### Part 1
+## Set Up
 
+### Create a Github Account (if you don't have one already)
+https://github.com/join
+
+Quick tips:
+* A mature github profile looks good on you, try to pick a name you'd want to keep for a while
+* Use an email that you will be using in the future. **Do not use your school email**
+
+### Installing *Git* on *Linux* (Windows Users here)
+
+Remember that we installed Ubuntu to run inside your Windows OS. At this point, you can treat your Ubuntu terminal as an Ubuntu OS (and follow any Ubuntu instructions/tutorials).
+
+Open up your Ubuntu terminal through the program (you can keep a shortcut, or you can just search for "Ubuntu" inside of your bottom left search bar)
+
+**Copy & paste the following** into the terminal window and **hit `Return`**. You may be prompted to enter your password.
+
+```shell
+sudo apt update
+sudo apt upgrade
+sudo apt install git
+```
+
+### Installing *Git* on *Mac*
+
+Last week you should have installed Homebrew on your Mac.
+
+Setting up Github is as simple as this:
+
+```shell
+brew install git
+```
+
+## Github Exercises
+
+### Part 1
 * Fork this repository
 * Clone this repository to your local
+* Debug `math_test.py`
+* Make changes to fix `math_test.py`
+* Stage your changes
+* Commit your changes
+* Push your change directly to the remote repository
+* Verify your change on https://www.github.com/
+
+### Part 2
 * Create a development branch
 * Create the file [your-name].txt file with your github username inside
 * Stage your changes
@@ -16,7 +58,7 @@ This is an exercise to get you through the basic steps of development with git. 
 * Submit a Pull Request
 * Delete your remote and local development branches
 
-### Part 2
+### Bonus
 
 * Pull a fresh version from master
 * Create a new development branch
@@ -31,27 +73,4 @@ This is an exercise to get you through the basic steps of development with git. 
 * Commit your changes
 * Push your branch to remote
 * Submit a pull request
-* Delete your remote and local development branches
-
-### Bonus
-
-* Pull a fresh version from master
-* Create a development branch
-* Create a file called wrongFile.txt
-* Realize you made a mistake
-* Perform a git reset (to remove your changes)
-* Create a file called rightFile.txt
-* Stage your changes
-* Commit your changes
-* Delete the rollcall.txt file
-* Stage your changes
-* Commit your changes
-* Realize that what you just did was a mistake
-* Panic for 2 seconds
-* Relax
-* Display git log
-* Find the commit you want to remove
-* Perform a git revert
-* Check git log to see what happened
-* Breathe a sigh of relief
 * Delete your remote and local development branches
